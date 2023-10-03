@@ -1,0 +1,231 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mini3</title>
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                list-style: none;
+                box-sizing: border-box;
+            }
+
+            body {
+                margin-left: 50px;
+                border: 5px solid black; 
+                box-sizing: border-box;
+                box-shadow: 5px 5px 5px darkgray;
+                font-family: "Gill Sans", sans-serif;
+            }
+
+            nav {
+                background: white;
+                height: 60px;
+                width: 100%;
+            }
+
+            .logo {
+                width: 100px;
+                height: 60px;
+            }
+
+            nav ul{
+                float: right;
+                margin-right: 50px;
+            }
+
+            nav ul li {
+                display: inline-block;
+                line-height: 60px;
+                margin: 0 5px;
+            }
+
+            nav ul li a {
+                color: black;
+                font-size: 12px;
+            }
+
+            button {
+                border: none;
+                color: white;
+                background: green;
+                padding: 7px 13px;
+            }
+
+            .blue_background {
+                margin-right: 8px;
+                padding-left: 8px;
+                padding-top: 40px;
+                text-align: center;
+                height: 260px;
+                background-color: rgb(16, 35, 79);
+            }
+
+            .blue_background h1 {
+                color: white;
+                font-size: 35px;
+            }
+
+            .blue_background p.p1 {
+                margin-top: 20px;
+                color: white;
+                opacity: 60%;
+            }
+            .blue_background p.p2 {
+                margin-top: 5px;
+                color: white;
+                opacity: 60%;
+            }
+
+            .green_box2 {
+           
+                margin-left: 42.5%;
+                margin-right: 42.5%;
+                margin-top: 25px;
+                padding: 10px 15px;
+                color: white;
+                background: green;
+                
+            }
+
+            .pictures {
+                margin-top: 25px;
+            }
+
+            .green_box2 a {
+                color: white;
+            }
+
+            img.spaceship {
+                margin-left: 120px;
+                width: 150px;
+                height: 150px;
+            }
+
+            img.diploma {
+                margin-left: 145px;
+                width: 150px;
+                height: 150px;
+            }
+
+            img.chatting {
+                width: 150px;
+                height: 150px;
+                float: right;
+                margin-right: 120px;
+            }
+
+            .numbers p {
+                font-size: 18px;
+            }
+
+            .numbers p.p4{
+                display: inline-block;
+                margin-left: 165px;
+
+            }
+            .numbers p.p5{
+                display: inline-block;
+                margin-left: 249px;
+            }
+            .numbers p.p6{
+                display: inline-block;
+                margin-left: 232px;
+            }
+
+            .comments p.p7{
+                display: inline-block;
+                font-size: 12px;
+                margin-top: 20px;
+                margin-left: 79px;
+            }
+
+            .comments p.p8{
+                display: inline-block;
+                font-size: 12px;
+                margin-left: 92px;
+            }
+
+            .comments p.p9{
+                display: inline-block;
+                font-size: 12px;
+                margin-left: 101px;
+            }
+
+
+        </style>
+
+
+    </head>
+    <body style="width: 1000px; height: 590px;" onload="toggleColor()">
+        <nav>
+            <img id="img4" class="logo" src="./assets/hockeytv-logo.png" alt="logo">
+            <ul class="center_text">
+                <li><b><a href="https://word.tips/spelling/platform-vs-plateform/">Platform</a></b></li>
+                <li><b><a href="https://www.thesaurus.com/browse/plans">Plans</a></b></li>
+                <li><b><a href="https://www.enterprise.ca/en/car-rental/locations/canada/qc/montreal.html">Enterprise</a></b></li>
+                <li><b><a href="https://education.nationalgeographic.org/resource/resource-types/">Resources</a></b></li>
+                <li style="margin-right: 180px;"><b><a href="https://www.mcgill.ca/dise/ba-egc">Education</a></b></li>
+                <li><a href="https://www.searchenginejournal.com/examples-contact-us-pages/378518/">Contact Us</a></li>
+                <li><a href="https://www.instagram.com/accounts/login/?hl=en">Log In</a></li>
+                <li><button class="green_box1" onclick="toggleColor()">Change Colour</button></li>
+            </ul>
+
+        </nav>
+        <div class="blue_background" id="background_is_blue">
+            <h1>See value from social sooner</h1>
+            <p class="p1">Our training and strategic services have helped</p>
+            <p class="p2">thousands of organizations succeed on social.</p>
+            <div class="green_box2">
+                <a href="https://www.youtube.com/watch?v=v9oQllaX8s0">Request a Demo</a>
+            </div>
+        </div>
+        <div class="pictures">
+            <img id="img1" class="spaceship" src="./assets/rocket.png" alt="rocket">
+            <img id="img2" class="diploma" src="./assets/graduation.png" alt="diploma">
+            <img id="img3" class="chatting" src="./assets/chat-app.png" alt="chatting">
+        </div>
+        <div class="numbers">
+            <p class="p4"><b>2,500</b></p>
+            <p class="p5"><b>45,000</b></p>
+            <p class="p6"><b>200,000+</b></p>
+        </div>
+        <div class="comments">
+            <p class="p7">enterprise organizations successfully launched</p>
+            <p class="p8">enterprise users onboarded seamlessly</p>
+            <p class="p9">professionals trained on product and stategy</p>
+        </div>
+
+        <script>
+
+            function toggleColor() {
+
+                var curentColor = document.getElementById("background_is_blue").style.backgroundColor;
+                var image1 =  document.getElementById("img1");
+                var image2 =  document.getElementById("img2");
+                var image3 =  document.getElementById("img3");
+                var image4 =  document.getElementById("img4");
+
+                if (curentColor  == 'rgb(16, 35, 79)') {
+                    background_is_blue.style.backgroundColor = 'rgb(221, 90, 153)';
+                    image1.style.filter = "hue-rotate(280deg)";
+                    image2.style.filter = "hue-rotate(130deg)";
+                    image3.style.filter = "hue-rotate(130deg)";
+                    image4.style.filter = "hue-rotate(130deg)";
+            
+                } else {
+                    background_is_blue.style.backgroundColor = 'rgb(16, 35, 79)';
+                    image1.style.filter = "none";
+                    image2.style.filter = "none";
+                    image3.style.filter = "none";
+                    image4.style.filter = "none";
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
