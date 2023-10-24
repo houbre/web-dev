@@ -1,0 +1,335 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mini5.css">
+    <title>mini5</title>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="#myTopnav" class="active">Home</a>
+        <a href="#" class="categories" onclick="show_about_me_page()">About me</a>
+        <a href="#" class="categories" onclick="show_my_hobbies_page()">Hobbies</a>
+        <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+    </div>
+
+    <div class="about_me" id="about_me">
+        <div class="row">
+            <div class="photo_info">
+                <div class="col-3">
+                    <h1>Monkey D. Luffy</h1>
+                    <img src="./assets/luffy.jpg" alt="luffy smiling">
+                    <h3>About me</h3>
+                    <p>I'm Captain Monkey D. Luffy, fearless leader of the Straw Hat Pirates.
+                        With unparalleled determination, I've navigated the Grand Line, forming alliances, 
+                        liberating oppressed islands, and battling formidable foes in pursuit of my dream to become the Pirate King.
+                        My skills in leadership, combat, and adaptability are second to none.
+                    </p>
+                </div>
+            </div>
+            <div class="summary_crew">
+                <div class="col-5">
+                    <h2>Summary</h2>
+                    <span class="underliner"></span>
+                    <ul class="summary">
+                        <li><strong>Age:</strong> 23</li>
+                        <li><strong>Bounty:</strong> Over 1.5 billion Berries</li>
+                        <li><strong>Educational Background:</strong> Homeschooled by Grandpa Garp</li>
+                        <li><strong>Occupation:</strong> Pirate Captain</li>
+                        <li><strong>Achievements:</strong>
+                            <ul>
+                                <li>Possesses the power of the Gomu Gomu no Mi Devil Fruit</li>
+                                <li>Liberated oppressed islands including Drum Island and Dressrosa</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h2>Crew</h2>
+                    <span class="underliner"></span>
+                    <p class="cur_boat">Current boat: Thousand Sunny</p>
+                    <button class="dreamButton" id="dreamButton">See their dreams!</button>
+                    <ul class="crew">
+                        <li><strong>Monkey D. Luffy:</strong> Captain</li>
+                        <div class="hide">-> To become the Pirate King: the most renowned and free pirate in the world.</div>
+                        <li><strong>Roronoa Zoro:</strong> Swordsman</li>
+                        <div class="hide">-> To become the world's greatest swordsman.</div>
+                        <li><strong>Nami:</strong> Navigator</li>
+                        <div class="hide">-> To draw a complete map of the world, specifically, a map of the entire world of One Piece.</div>
+                        <li><strong>Usopp: </strong> Sniper</li>
+                        <div class="hide">-> To become a brave warrior of the sea and to make his lies come true by having adventures and proving himself to be courageous.</div>
+                        <li><strong>Sanji: </strong> Cook</li>
+                        <div class="hide">-> To find the All Blue, a legendary sea where fish from all the world's oceans gather, allowing him to create the perfect cuisine.</div>
+                        <li><strong>Tony Tony Chopper:</strong> Doctor</li>
+                        <div class="hide">-> To become a doctor capable of curing any disease and to see the world.</div>
+                        <li><strong>Nico Robin:</strong> Archaeologist</li>
+                        <div class="hide">-> To find the Rio Poneglyphs and uncover the true history of the world, which has been kept hidden by the World Government.</div>
+                        <li><strong>Franky:</strong> Shipwright</li>
+                        <div class="hide">-> To build and ride a ship that will circumnavigate the world and become known as the "ship of dreams."</div>
+                        <li><strong>Brook:</strong> Musician</li>
+                        <div class="hide">-> To find the One Piece and to reunite with a whale friend, Laboon, who is waiting at the entrance to the Grand Line.</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="attack_skills">
+                <div class="col-4">
+                    <h3>Skills</h3>
+                    <span class="underliner"></span>
+                    <p class="attack_description">Descriptions and pictures of the wide set of attack I possess, based on my use of the Gomu Gomu no Mi Devil Fruit powers!</p>
+                    <div class="container">
+                        <button class="accordion">Gear 2</button>
+                            <div class="panel">
+                                <img src="./assets/gear2.jpg" alt="gear 2">
+                                <p>Luffy enhances his strength, speed, and attacks by pumping his blood at an accelerated rate.</p>
+                            </div>
+                    </div>
+                    <div class="container">
+                        <button class="accordion">Gear 3</button>
+                            <div class="panel">
+                                <img src="./assets/Gear_3.jpg" alt="gear 3">
+                                <p>Luffy inflates his bones to enormous proportions, granting incredible strength and the ability to use techniques like Gigant Thor Axe.</p>
+                            </div>
+                    </div>
+                    <div class="container">
+                        <button class="accordion">Gear 4</button>
+                            <div class="panel">
+                                <img src="./assets/gear4.jpg" alt="gear 4">
+                                <p>Luffy inflates his muscles with Haki to achieve enhanced strength, speed, and durability.</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my_hobbies" id="my_hobbies">
+        <div class="row1">
+            <h1>Luffy's hobbies</h1>
+        </div>
+        <div class="row2">
+            <div class="eating">
+                <div class="col-6">
+                    <h2><strong>EATING</strong></h2>
+                    <div class="dropdown1">
+                        <button onclick="dropdown_food()" class="dropbtn">See what luffy eats!</button>
+                        <div id="dropdown_food" class="dropdown_food">
+                          <a href="#" onclick="displayFood('meat')">Meat</a>
+                          <a href="#" onclick="displayFood('chocolate')">Chocolate</a>
+                          <a href="#" onclick="displayFood('devils_fruit')">Devil Fruit</a>
+                        </div>
+                    </div>
+                    <div class="meat" id="meat">
+                        <p>Luffy's passion for meat is legendary.
+                             His eyes light up at the sight of it, and he devours it with unbridled enthusiasm,
+                             often exclaiming, "Meat is the best!"
+                        </p>
+                        <img src="./assets/luffy_eats_meat.jpg" alt="luffy eats meat">
+                    </div>
+                    <div class="chocolate" id="chocolate">
+                        <p>
+                            In Whole Cake Island, Luffy's encounter with chocolate brings childlike delight to the Pirate King-to-be. 
+                            He relishes chocolate treats while navigating 
+                            the sweet yet treacherous terrain of Big Mom's territory.
+                        </p>
+                        <img src="./assets/luffy_eats_chocolate.jpg" alt="luffy eats chocolate">
+                    </div>
+                    <div class="devils_fruit" id="devils_fruit">
+                        <p>
+                            When Luffy took a bite of the mysterious Devil Fruit, 
+                            he unwittingly gained the power to stretch his body like rubber but sacrificed his ability to swim.
+                        </p>
+                        <img src="./assets/Luffy_eats_Devil_Fruit.jpg" alt="lufy eats a devil's fruit">
+                    </div>
+                </div>
+            </div>
+            <div class="adventures">
+                <div class="col-6">
+                    <h2><strong>ADVENTURES</strong></h2>
+                    <div class="dropdown2">
+                        <button onclick="dropdown_adventures()" class="dropbtn2">See Luffy's adventures!</button>
+                        <div id="dropdown_adventures" class="dropdown_adventures">
+                          <a href="#" onclick="displayAdventure('skypiea')">Skypiea</a>
+                          <a href="#" onclick="displayAdventure('thriller_bark')">Thriller Bark</a>
+                          <a href="#" onclick="displayAdventure('fishman_island')">Fish-Man Island</a>
+                        </div>
+                    </div>
+                    <div class="skypiea" id="skypiea">
+                        <p>Luffy and his crew explored the floating island of Skypiea in the sky,
+                             encountering winged inhabitants, 
+                            unique technology, and battling god-like figures in a quest for hidden treasures.
+                        </p>
+                        <img src="./assets/skypiea.jpg" alt="skypiea">
+                    </div>
+                    <div class="thriller_bark" id="thriller_bark">
+                        <p>
+                            The crew ventured into the eerie and massive ship known as Thriller Bark, which was populated by zombies, 
+                            ghosts, and a bizarre doctor who stole shadows. It was a haunting and strange adventure.
+                        </p>
+                        <img src="./assets/thriller_bark.jpg" alt="thriller bark">
+                    </div>
+                    <div class="fishman_island" id="fishman_island">
+                        <p>
+                            Luffy's journey led him to Fish-Man Island, an underwater city populated by fish-men and merfolk,
+                             where racial tensions and political intrigue added a unique and complex layer to their adventures.
+                        </p>
+                        <img src="./assets/Fish-Man_Island.jpg" alt="fish-man Island">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+            <p class="info">Email: monkeydluffy@onepiece.com</p>
+    </div>
+</body>
+
+
+
+<script>
+
+    //Hobbies is displayed want to switch to about me
+    function show_about_me_page() {
+
+        var aboutMeDiv = document.getElementById("about_me");
+        var hobbiesDiv = document.getElementById("my_hobbies");
+
+        if (aboutMeDiv.style.display === '' || aboutMeDiv.style.display === "none" ) {
+            aboutMeDiv.style.display = "block";
+            hobbiesDiv.style.display = "none";
+        }
+    }
+
+    //About me is displayed, want to switch to hobbies
+    function show_my_hobbies_page() {
+
+        var aboutMeDiv = document.getElementById("about_me");
+        var hobbiesDiv = document.getElementById("my_hobbies");
+
+        if (hobbiesDiv.style.display === '' || hobbiesDiv.style.display === "none") { 
+            aboutMeDiv.style.display = "none";
+            hobbiesDiv.style.display = "block";
+        }
+    }
+
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";
+        }
+    });
+    }
+
+const toggleButton = document.getElementById("dreamButton");
+const hideLines = document.querySelectorAll('.hide');
+
+toggleButton.addEventListener('click', function () {
+    this.classList.toggle("active");
+    hideLines.forEach(line => {
+        if (line.style.display === "none" || line.style.display === '') {
+            line.style.display = "block";
+        } else {
+            line.style.display = "none";
+        }
+    });
+});
+
+function dropdown_food() {
+  document.getElementById("dropdown_food").classList.toggle('show');
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown_food");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+
+  if (!event.target.matches('.dropbtn2')) {
+    var dropdowns = document.getElementsByClassName("dropdown_adventures");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show2')) {
+        openDropdown.classList.remove('show2');
+      }
+    }
+  }
+
+}
+
+function displayFood(food){
+
+    const meat = document.getElementById("meat")
+    const chocolate = document.getElementById("chocolate")
+    const devils_fruit = document.getElementById("devils_fruit")
+
+
+    if (food === 'meat') {
+        meat.style.display = 'block'
+        chocolate.style.display = 'none'
+        devils_fruit.style.display = 'none'
+    } else if (food === 'chocolate') {
+        meat.style.display = 'none'
+        chocolate.style.display = 'block'
+        devils_fruit.style.display = 'none'
+    } else {
+        meat.style.display = 'none'
+        chocolate.style.display = 'none'
+        devils_fruit.style.display = 'block'
+    }
+}
+
+function dropdown_adventures() {
+  document.getElementById("dropdown_adventures").classList.toggle('show2');
+}
+
+function displayAdventure(adventure){
+
+    const skypiea = document.getElementById("skypiea")
+    const thriller_bark = document.getElementById("thriller_bark")
+    const fishman_island = document.getElementById("fishman_island")
+
+
+    if (adventure === 'skypiea') {
+        skypiea.style.display = 'block'
+        thriller_bark.style.display = 'none'
+        fishman_island.style.display = 'none'
+    } else if (adventure === 'thriller_bark') {
+        skypiea.style.display = 'none'
+        thriller_bark.style.display = 'block'
+        fishman_island.style.display = 'none'
+    } else {
+        skypiea.style.display = 'none'
+        thriller_bark.style.display = 'none'
+        fishman_island.style.display = 'block'
+    }
+}
+
+</script>
+
+
+
+</html>
