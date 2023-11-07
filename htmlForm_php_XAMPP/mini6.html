@@ -1,0 +1,158 @@
+name: Louis-Antoine Habre 
+ID: 260989613
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini6</title>
+
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+
+    <script>
+        function errorMessage() {
+
+            var first_name = document.getElementById("first_name").value;
+            var last_name = document.getElementById("last_name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            var windowsRadio = document.getElementById('windows');
+            var macRadio = document.getElementById('Mac_OS_X');
+            var linuxRadio = document.getElementById('Linux');
+            var otherRadio = document.getElementById('other');
+
+            var error_first_name = false
+            var error_last_name = false
+            var error_email = false
+            var error_phone = false
+            var error_radios = false
+
+            var missing_at_sign = false
+
+            if (first_name == ''){
+                error_first_name = true
+                document.getElementById("first_name_text").style.color = "red"
+            } else {
+                error_first_name = false
+                document.getElementById("first_name_text").style.color = "black"
+            }
+
+            if (last_name == ''){
+                error_last_name = true
+                document.getElementById("last_name_text").style.color = "red"
+            } else {
+                error_last_name = false
+                document.getElementById("last_name_text").style.color = "black"
+            }
+
+            if (email == ''){
+                error_email = true
+                document.getElementById("email_text").style.color = "red"
+            } else {
+                error_email = false
+
+                if (email.includes("@")){
+                    var missing_at_sign = false
+                    document.getElementById("email_text").style.color = "black"
+                } else {
+                    var missing_at_sign = true
+                    document.getElementById("email_text").style.color = "red"
+                }
+            }
+
+            if (phone == ''){
+                error_phone = true
+                document.getElementById("phone_text").style.color = "red"
+            } else {
+                error_phone = false
+                document.getElementById("phone_text").style.color = "black"
+            }
+
+            if (!windows.checked && !macRadio.checked && !linuxRadio.checked && !otherRadio.checked){
+                error_radios = true
+                document.getElementById("radio_text").style.color = "red"
+            } else {
+                error_radios = false
+                document.getElementById("radio_text").style.color = "black"
+            }
+
+    
+
+            if ((error_first_name || error_last_name || error_phone || error_radios) && missing_at_sign){
+                alert("Please fill out all the fields / The email address must contain an @ symbol")
+                return false
+            } else if (!(error_first_name || error_last_name || error_phone || error_radios) && missing_at_sign) {
+                alert("The email address must contain an @ symbol")
+                return false
+            } else if (error_first_name || error_last_name || error_phone || error_radios || error_email) {
+                alert("Please fill out all the fields")
+                return false
+            } else {
+                return true
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+
+<h2>Registration Form</h2>
+
+<p>Please fill in all fields and click Register.</p>
+
+<h3>User Information</h3>
+
+
+
+<form name="mini6_form" action="mini6.php" method="post" onsubmit="return errorMessage()">
+
+ <label id="first_name_text">First name:</label><input name="first_name" id="first_name" type="text"> <br>
+ <label id="last_name_text">Last name:</label><input name="last_name" id="last_name" type="text"> <br>
+ <label id="email_text">Email:</label><input type="text" id="email" name="email"> <br>
+ <label id="phone_text">Phone:</label><input type="text" name="phone" id="phone"> <br>
+
+ <h3>Publications</h3>
+
+ <p>Which book would you like information about?</p>
+
+<select name="some_books">
+    <option value="Harry Potter and The Sorcerer's Stone">Harry Potter and The Sorcerer's Stone</option>
+    <option value="Harry Potter and The Chamber of Secrets">Harry Potter and The Chamber of Secrets</option>
+    <option value="Harry Potter and The Prisoner of Azkaban">Harry Potter and The Prisoner of Azkaban</option>
+</select>
+
+<h3>Operating System</h3>
+
+<p>Which operating system do you use?</p>
+
+<div id="radio_text">
+<input name="OS" type="radio" value="windows" id="windows"> 
+Windows
+<input name="OS" type="radio" value="Mac_OS_X" id="Mac_OS_X"> 
+Mac OS X
+<input name="OS" type="radio" value="Linux" id="Linux"> 
+Linux   
+<input name="OS" type="radio" value="other" id="other"> 
+Other
+</div>
+<br>
+<br>
+
+<input type="submit" name="submit" value="Register">
+
+</form>
+
+</html>
