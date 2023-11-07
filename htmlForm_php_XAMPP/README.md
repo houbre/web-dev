@@ -1,0 +1,1 @@
+The purpose of this question is to practice processing a REST POST call from a webpage to a backend PHP program using a <form> running from a local XAMPP server. All the code (HTML and PHP) will be stored in the HTDOCS folder under XAMPP.
